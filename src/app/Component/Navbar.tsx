@@ -35,7 +35,7 @@ const Navbar=()=> {
      
         {/* {icon} */}
      <div className="flex md:pl-80   rounded-xl relative  items-center justify-center  ">
-        <div className="w-4 h-4 absolute bottom-5 right-0 bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
+        <div className="w-4 h-4 absolute  right-0 bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
         <ShoppingCart size={24} className="w-8 h-8"/>
 </div>
 </div>
