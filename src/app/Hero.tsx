@@ -14,7 +14,7 @@ const Hero=()=> {
             <h2 className="pt-10 font-serif  md:text-7xl text-3xl text-extrabold">An Industrial <br/>Take on <br/> Streetwear</h2>
             <p className="pt-10 text-lg text-gray-600">Anyone can beat you but no one can beat <br/> your outfit as long as you wear Dine outfits.</p>
             <div className="pt-8 mb-5">
-              <Link href="/product">
+              <Link href="/productx">
             <button className="bg-black text-white rounded-full  py-2  p-1 md:px-3 flex gap-2">  <ShoppingCart  size={25}/>Start Shopping</button>
             </Link>
             </div>
@@ -79,7 +79,7 @@ const Hero=()=> {
                t-shirts have now become one of the most popular apparel items. </h4>
                
                <div className="pt-8 mb-5">
-              <Link href="/product">
+              <Link href="/productx">
             <button className=" bg-orange-500 text-white rounded-full  font-bold md:py-2  p-2 md:px-4 flex gap-2">  <ShoppingBag  size={25}/>Shop Now</button>
             </Link>
             </div>
