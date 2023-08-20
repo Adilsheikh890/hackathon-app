@@ -1,8 +1,9 @@
 
-import { defineField, defineType } from 'sanity';
+import { defineType } from 'sanity';
+import {defineField} from 'sanity'
 
 
-export default defineType ({
+export default   defineType ({
     name: "products",
     type: "document",
     title: "products",
