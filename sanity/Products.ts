@@ -22,10 +22,10 @@ export default defineType ({
         }),
         defineField({
 
-            name : "slug",
-            type : "slug",
+            name  :  "slug",
+            type  :  "slug",
             title : "slug",
-            options:{
+            options : {
                source : "title",
                maxLength : 50,
             }
