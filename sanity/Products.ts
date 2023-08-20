@@ -1,6 +1,6 @@
 
-import { defineType } from 'sanity';
-import {defineField} from 'sanity'
+import { defineType , defineField } from 'sanity';
+
 
 
 export default   defineType ({
