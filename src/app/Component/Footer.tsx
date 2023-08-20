@@ -10,7 +10,7 @@ export default function Footer() {
      <div className=" flex md:flex-row flex-col gap-[30px] pb-10 px-5">
                   <div className="md:w-5/6">
                   <Link href="/">
-                             <Image src="/logo.webp" alt='logo' width={150} height={150} ></Image>
+                             <Image src="/Logo.webp" alt='logo' width={150} height={150} ></Image>
                   </Link>
                   <p className="pt-5  font-serif">
                   Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.

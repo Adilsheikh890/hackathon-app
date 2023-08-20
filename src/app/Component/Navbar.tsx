@@ -12,7 +12,7 @@ const Navbar=()=> {
   
     <div className="   ">
      <Link href="/">
-            <Image src="/logo.webp" alt='logo' width={150} height={150} ></Image>
+            <Image src="/Logo.webp" alt='logo' width={150} height={150} ></Image>
             </Link>
      </div>
 
@@ -34,8 +34,9 @@ const Navbar=()=> {
          </div>
      
         {/* {icon} */}
-     <div className="flex md:pl-80   rounded-xl relative  items-center justify-center  ">
-        <div className="w-4 h-4 absolute  right-0 bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
+     <div className="flex md:pl-80   relative    items-center justify-center  ">
+     
+        <div className="w-4 h-4 absolute  top-0 right-0 bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
         <ShoppingCart size={24} className="w-8 h-8"/>
 </div>
 </div>
