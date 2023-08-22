@@ -1,5 +1,6 @@
 import React from 'react'
 import FetchData from '../../../../sanity/FetchData';
+import { Button } from '@/components/ui/button';
 
 export default  async function  page({params}: {params:any}) {
 
@@ -14,6 +15,7 @@ export default  async function  page({params}: {params:any}) {
       <h1>description:{filteredData.description}</h1>
       <h1>category:{filteredData.category}</h1>
       <h1>price:{filteredData.price}</h1>
+      
 </div>
   )
 }
