@@ -1,4 +1,3 @@
-
 import { sql } from "@vercel/postgres";
 
 import {  pgTable, varchar, integer,serial} from "drizzle-orm/pg-core";
@@ -16,7 +15,7 @@ export const cartColumns  =  pgTable("cartData", {
         image_url: varchar("image_url").notNull(),
         product_price: integer("product_price").notNull(),
         product_quantity: integer("product_quantity").notNull(),
-        
+
     
         
 

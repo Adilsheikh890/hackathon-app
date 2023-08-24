@@ -3,6 +3,7 @@ import Wrapper from './Component/Wrapper'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ShoppingCart,Truck, Users2,CircleDollarSign,ShoppingBag } from 'lucide-react'
+import Promotion from './Promotion'
 
 const Hero=()=> {
   return (
@@ -55,7 +56,7 @@ const Hero=()=> {
        {/* {link} */}
        
           
-  
+               <Promotion/>  
   
   
          

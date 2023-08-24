@@ -8,7 +8,7 @@ const Navbar=()=> {
     const [toggle, setToggle]= useState(true)
   return (
          
-    <div className="  flex px-3  py-2 md:pl-20 pl-10 justify-between sticky top-0 backdrop-blur-lg bg-gradient-to-tr from-white via-[#ffffffde] to-opacityDownColor md:z-20">
+    <div className="  flex px-3  py-2 md:pl-20 pl-10 mt-5 justify-between sticky top-0 backdrop-blur-lg bg-gradient-to-tr from-white via-[#ffffffde] to-opacityDownColor md:z-20">
   
     <div className="   ">
      <Link href="/">
