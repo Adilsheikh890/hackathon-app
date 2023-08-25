@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import { urlForImage } from "../../../sanity/lib/image";
+import Image from 'next/image'
 
 
 
@@ -12,6 +13,34 @@ export default function ProductsDetails ( {
     filteredData :any;
 } )
     {
+      const [quantity, setQuantity] = useState(1);
+      function handleIncrement() {
+        setQuantity(quantity + 1);
+      }
+      function handleDecrement() {
+        setQuantity(quantity - 1);
+      }
+
+      async function handleAddToCart() {
+        try {
+          const res = await fetch("/api/cart", {
+            method: "POST",
+            body: JSON.stringify(
+              {
+          user_id: "Adil",
+          product_id: filteredData._id,
+          product_title: filteredData.title,
+          product_price: filteredData.price * quantity,
+          product_quantity: quantity,
+          image_url: urlForImage(filteredData.image).url(),
+            
+            }
+            ),
+          });
+        } catch (error) {
+          console.log("error", error);
+        }
+      }
   return (
 
     <div className="bg-white">
@@ -33,7 +62,7 @@ export default function ProductsDetails ( {
             <h2 className="sr-only">Images</h2>
 
             <div>
-              <img
+              <Image
                 key={filteredData._id}
                 src={urlForImage(filteredData.image).url()}
                 alt={filteredData.title}
@@ -46,15 +75,15 @@ export default function ProductsDetails ( {
           <div className="mt-5 lg:col-span-6">
             <div className="flex border w-fit mt-5">
               <button
-                //onClick={() => handleDecrement()}
-               // disabled={quantity === 1}
+                onClick={() => handleDecrement()}
+                disabled={quantity === 1}
                 className={`px-3 py-1 text-center hover:bg-gray-200`}
               >
                 -
               </button>
-              <div className="px-3 py-1 text-center">quantity</div>
+              <div className="px-3 py-1 text-center">{quantity}</div>
               <button
-                //onClick={() => handleIncrement()}
+                onClick={() => handleIncrement()}
                 className={`px-3 py-1 text-center hover:bg-gray-200`}
               >
                 +
@@ -62,8 +91,8 @@ export default function ProductsDetails ( {
             </div>
             <div>
               <button
-                //onClick={handleAddToCart}
-                className={`w-full overflow-hidden group text-center border border-black py-3 mt-5 text-lg font-bold flex items-center`}
+                onClick={handleAddToCart}
+                className={`w-full overflow-hidden  hover:bg-slate-300 text-center border border-black py-3 mt-5 text-lg font-bold flex items-center`}
               >
                 <p className="flex-grow">Add to Cart</p>
               </button>

@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+
+
 import { AlignCenter,ShoppingCart,X } from 'lucide-react'
 
 const Navbar=()=> {
@@ -34,12 +36,16 @@ const Navbar=()=> {
          </div>
      
         {/* {icon} */}
+        
+        <Link href={"/cart"}>
      <div className="flex md:pl-80   relative    items-center justify-center  ">
      
         <div className="w-4 h-4 absolute  top-0 right-0 bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
         <ShoppingCart size={24} className="w-8 h-8"/>
 </div>
+</Link>
 </div>
+
      
      
      {/* hmburger */}
@@ -67,11 +73,16 @@ const Navbar=()=> {
              <Link href="/Productx">All Product</Link>
              </li>
              {/* {icon} */}
+
+            
+
+
+             <Link href={"/cart"}><ShoppingCart size={30} />
              <div className="flex md:pl-80  mt-4  rounded-xl relative  items-center justify-center  ">
         <div className="w-4 h-4 absolute  top-0 bottom-8 right-12 bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
-        <ShoppingCart size={30} className=""/>
-</div>
-             
+        
+         </div>
+          </Link>
 
          </ul>
         
