@@ -40,8 +40,8 @@ export default function ProductsDetails ( {
             }
             ),
           });
-        } catch (error) {
-          //console.log("error", error);
+        }catch (error){
+                    //console.log("error", error);
         }
       }
   return (
@@ -51,12 +51,12 @@ export default function ProductsDetails ( {
       <div className="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
           <div className="lg:col-span-6 lg:col-start-7">
-            <div className="">
+            <div>
               <h1 className="text-3xl font-bold text-gray-900">
                 {filteredData.title}
               </h1>
               <p className="text-2xl font-medium text-gray-900">
-                Rs {filteredData.price}
+               {filteredData.price}
               </p>
             </div>
           </div>
@@ -104,9 +104,9 @@ export default function ProductsDetails ( {
               </button>
             </div>
             <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">
+             <h2 className="text-sm font-medium text-gray-900">
                 Description
-              </h2>
+            </h2>
 
               <div className="prose prose-sm mt-4 text-gray-500" />
               {filteredData.description}
