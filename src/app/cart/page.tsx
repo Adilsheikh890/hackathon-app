@@ -1,10 +1,11 @@
-"use client";
+
 import React from 'react'
 import CartItems from "../Componentx/CartItems"
 
-export default function page() {
+export default function page(items : number) {
   return (
-    <CartItems/>
+    
+    <CartItems key={items}/>
 
   )
 }

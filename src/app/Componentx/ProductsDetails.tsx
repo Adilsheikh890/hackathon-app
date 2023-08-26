@@ -9,13 +9,13 @@ import { useAuth } from '@clerk/nextjs';
 
 
 export default function ProductsDetails ( {
-    filteredData,
+    filteredData, 
 }:{
-    filteredData :any;
+    filteredData :any
 } )
     {
       const { userId } = useAuth();
-      console.log(userId)
+      //console.log(userId)
       const [quantity, setQuantity] = useState(1);
       function handleIncrement() {
         setQuantity(quantity + 1);
@@ -41,7 +41,7 @@ export default function ProductsDetails ( {
             ),
           });
         } catch (error) {
-          console.log("error", error);
+          //console.log("error", error);
         }
       }
   return (

@@ -28,12 +28,12 @@ export default async function CartItems() {
   //const {  isSignedIn } = useAuth();
   return (
     <div>
-      <h1>cart</h1>
+      
       {isSignedIn ?
       
       <div className='flex gap-4'   >
-        {products?.map((item:any , helo:number)=>(        
-             <div key={helo}>
+        {products?.map((item:any , items :number)=>(        
+             <div key={items}>
               <Image src={item.image_url} alt='image' width={200} height={200} />
             <h1>{item.product_title}</h1>
             <h1>{item.product_price}</h1>
@@ -46,8 +46,8 @@ export default async function CartItems() {
       </div>
     
       :
-    <div>
-      <h1>Plese Login</h1>
+    <div className="items-center text-3xl text-yellow-500">
+      <h1 className="justify-items-center md:pl-80 mt-10 font-bold">Plese Signin your Acccount</h1>
     </div>
       }
     </div>  

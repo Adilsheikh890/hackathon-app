@@ -18,7 +18,7 @@ export const  POST = async (request : NextRequest)=>{
         product_quantity: req.product_quantity,
            
            }).onConflictDoUpdate({
-            target: [cartColumns.product_title],
+            target: [cartColumns.user_id,cartColumns.product_title],
         set: {
           product_quantity: req.product_quantity,
           product_price: req.product_price,
@@ -43,8 +43,29 @@ export const GET = async (request: NextRequest) => {
         .where(eq(cartColumns.user_id, uid));
       return NextResponse.json(res);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
       return NextResponse.json(error);
+    }
+  };
+
+
+  export const DELETE = async (request: NextRequest) => {
+    const req = await request.json();
+    try {
+      const res = await db
+        .delete(cartColumns)
+        .where(
+          and(
+            eq(cartColumns.user_id, req.user_id),
+            eq(cartColumns.product_title, req.product_title)
+          )
+        )
+        .returning();
+        console.log('Product Successfully Deleted')
+      return NextResponse.json({ message: "Product Successfully Deleted" });
+    } catch (error) {
+      console.log("Error removing item from cart", error);
+      return NextResponse.json({ message: "Error Deleting Product" });
     }
   };
   
