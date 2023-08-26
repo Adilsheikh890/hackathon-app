@@ -5,7 +5,7 @@ import CartItems from "../Componentx/CartItems"
 export default function page() {
   return (
     
-    <CartItems />
+    <CartItems/>
 
   )
 }
