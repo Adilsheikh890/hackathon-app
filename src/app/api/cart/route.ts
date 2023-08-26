@@ -1,22 +1,13 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { cartColumns, db  } from "../../Database/Drizzel";
-import { cookies } from "next/dist/client/components/headers";
-import {v4} from "uuid";
+
 import {and, eq} from "drizzle-orm";
 
 
 export const  POST = async (request : NextRequest)=>{
     const req= await request.json();
-    const setcookies = cookies()
-    const uid = v4();
-    const user_id = setcookies.get("user_id")?.value as string;
-    if(!user_id){
-    setcookies.set("user_id",uid)
-
-
-    }
-
+   
     try{
            const res  = await db.insert(cartColumns).values({
          user_id: req.user_id,

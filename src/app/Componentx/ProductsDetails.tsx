@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { urlForImage } from "../../../sanity/lib/image";
 import Image from 'next/image'
+import { useAuth } from '@clerk/nextjs';
 
 
 
@@ -13,6 +14,8 @@ export default function ProductsDetails ( {
     filteredData :any;
 } )
     {
+      const { userId } = useAuth();
+      console.log(userId)
       const [quantity, setQuantity] = useState(1);
       function handleIncrement() {
         setQuantity(quantity + 1);
@@ -27,7 +30,7 @@ export default function ProductsDetails ( {
             method: "POST",
             body: JSON.stringify(
               {
-          user_id: "Adil",
+          user_id: userId,
           product_id: filteredData._id,
           product_title: filteredData.title,
           product_price: filteredData.price * quantity,
