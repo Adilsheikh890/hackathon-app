@@ -1,6 +1,6 @@
 import React from 'react'
 import FetchData from '../../../../sanity/FetchData';
-import { Button } from '@/components/ui/button';
+//import { Button } from '@/components/ui/button';
 import  ProductsDetails from '../../Componentx/ProductsDetails';
 
 
