@@ -1,5 +1,5 @@
-"use client";
 
+"use client";
 
 import {  Trash2 } from 'lucide-react';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 import { useAuth } from '@clerk/nextjs';
 
 
-export default async function CartItems() {
+export default  function CartItems() {
 
   const [products, setProducts] = useState<any>(null);
   const [state, setState] = useState(false);
