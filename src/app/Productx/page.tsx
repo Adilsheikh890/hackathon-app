@@ -21,7 +21,7 @@ export default async function page () {
         <div>
           <div className=" mt-10 "><Image src="/product.PNG" alt='image' width={1300} height={600} className=" p-3 md:pl-20"/></div>
           <Wrapper>
-    <div className="flex md:flex-row flex-col gap-2 items-center justify-center  text-black md:mt-20 ">
+    <div className="flex md:flex-row flex-col  gap-4   text-black md:mt-20 ">
        {data.map((product :any , item : number)=>(
           <Link href ={`/product/${product.slug.current}`} className='p-5 ' key={item}>
           

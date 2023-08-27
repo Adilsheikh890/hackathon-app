@@ -1,21 +1,21 @@
 
 "use client";
-
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { urlForImage } from "../../../sanity/lib/image";
 import Image from 'next/image'
 import { useAuth } from '@clerk/nextjs';
 
 
 
+
 export default function ProductsDetails ( {
     filteredData, 
 }:{
-    filteredData :any
+     filteredData :any 
 } )
     {
       const { userId } = useAuth();
-      //console.log(userId)
+      console.log(userId)
       const [quantity, setQuantity] = useState(1);
       function handleIncrement() {
         setQuantity(quantity + 1);
