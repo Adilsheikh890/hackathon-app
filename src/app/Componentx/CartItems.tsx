@@ -7,14 +7,14 @@ import React, { useEffect, useState } from 'react'
 import { useAuth } from '@clerk/nextjs';
 
 
-export default async function CartItems() {
+export default  function CartItems() {
 
   const [products, setProducts] = useState<any>(null);
   const [state, setState] = useState(false);
   const { isSignedIn, userId } = useAuth();
 
   useEffect(() => {
-  const  await= fetch(`http://localhost:3000/api/cart?user_id=${userId}`)
+  fetch(`http://localhost:3000/api/cart?user_id=${userId}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [isSignedIn, state]);
