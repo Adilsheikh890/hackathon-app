@@ -15,7 +15,7 @@ export default function ProductsDetails ( {
 } )
     {
       const { userId } = useAuth();
-      console.log(userId)
+      //console.log(userId)
       const [quantity, setQuantity] = useState(1);
       function handleIncrement() {
         setQuantity(quantity + 1);
