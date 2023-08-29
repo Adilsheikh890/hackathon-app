@@ -1,19 +1,15 @@
-
 "use client";
 import React, {  useState } from "react";
 import { urlForImage } from "../../../sanity/lib/image";
 import Image from 'next/image'
 import { useAuth } from '@clerk/nextjs';
 
+export default function ProductsDetails ({filteredData}:{filteredData :any})
+{
+    console.log("Fetch Data", filteredData);
+  
 
-
-
-export default function ProductsDetails ( {
-    filteredData, 
-}:{
-     filteredData :any 
-} )
-    {
+      console.log(filteredData);
       const { userId } = useAuth();
       //console.log(userId)
       const [quantity, setQuantity] = useState(1);
@@ -36,8 +32,7 @@ export default function ProductsDetails ( {
           product_price: filteredData.price * quantity,
           product_quantity: quantity,
           image_url: urlForImage(filteredData.image).url(),
-            
-            }
+          }
             ),
           });
         }catch (error){
