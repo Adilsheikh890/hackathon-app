@@ -6,10 +6,10 @@ import { useAuth } from '@clerk/nextjs';
 
 export default function ProductsDetails ({filteredData}:{filteredData :any})
 {
-    console.log("Fetch Data", filteredData);
+   /// console.log("Fetch Data", filteredData);
   
 
-      console.log(filteredData);
+     // console.log(filteredData);
       const { userId } = useAuth();
       //console.log(userId)
       const [quantity, setQuantity] = useState(1);
@@ -20,7 +20,7 @@ export default function ProductsDetails ({filteredData}:{filteredData :any})
         setQuantity(quantity - 1);
       }
 
-      async function handleAddToCart() {
+      async  function handleAddToCart() {
         try {
           const res = await fetch("/api/cart", {
             method: "POST",
@@ -41,7 +41,7 @@ export default function ProductsDetails ({filteredData}:{filteredData :any})
       }
   return (
 
-    <div className="bg-white">
+    <div className="bg-white ">
     <div className="pb-16 pt-6 sm:pb-24">
       <div className="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
@@ -55,9 +55,9 @@ export default function ProductsDetails ({filteredData}:{filteredData :any})
               </p>
             </div>
           </div>
-
-          <div className="mt-8 lg:col-span-6 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
-            <h2 className="sr-only">Images</h2>
+          
+          <div className="mt-8 lg:col-span-6 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0 ">
+          <h2 className="sr-only">Images</h2>
 
             <div>
               <Image
@@ -99,9 +99,7 @@ export default function ProductsDetails ({filteredData}:{filteredData :any})
               </button>
             </div>
             <div className="mt-10">
-             <h2 className="text-sm font-medium text-gray-900">
-                Description
-            </h2>
+             
 
               <div className="prose prose-sm mt-4 text-gray-500" />
               {filteredData.description}
