@@ -30,6 +30,10 @@ const Navbar=()=> {
              <li className='hover:text-orange-500 hover:underline text-lg font-serif '>
              <Link href="/Women">Women</Link>
              </li>
+             <li className='hover:text-orange-500 hover:underline text-lg font-serif '>
+             <Link href="/Kids">Kids</Link>
+             </li>
+
              <li className='hover:text-orange-500 hover:underline text-lg font-serif'>
              <Link href="/Productx">All Product</Link>
              </li>
@@ -44,7 +48,7 @@ const Navbar=()=> {
         <Link href={"/cart"}>
      <div className="flex md:pl-80   relative    items-center justify-center  ">
      
-        <div className="w-4 h-4 absolute  top-0 right-0 bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
+     <div className="w-4 h-4 absolute  top-0 right-0 bg-red-400 text-xs font-light rounded-full flex justify-center">C</div>
         <ShoppingCart size={24} className="w-8 h-8"/>
 </div>
 </Link>
@@ -92,6 +96,10 @@ const Navbar=()=> {
              </li>
              <li className="mx-5 my-2 pt-4 pr-12 text-xl border-b-2 hover:text-orange-500 hover:underline font-serif" >
              <Link href="/Women">Women</Link>
+
+             <li className=' mx-5 my-2 pt-4  border-b-2 hover:text-orange-500 hover:underline text-lg font-serif '>
+             <Link href="/Kids">Kids</Link>
+             </li>
              </li>
              <li className="mx-5 my-2 pt-4 pr-12 text-xl border-b-2 hover:text-orange-500 hover:underline font-serif">
              <Link href="/Productx">All Product</Link>
@@ -104,7 +112,7 @@ const Navbar=()=> {
              <Link href={"/cart"}><ShoppingCart size={30} className="" />
              <div className="    relative    items-center justify-center  ">
      
-        <div className="w-4 h-4 absolute  top-0 right- bg-red-400 text-xs font-light rounded-full flex justify-center">3</div>
+             <div className="w-4 h-4 absolute  top-0 right- bg-red-400 text-xs font-light rounded-full flex justify-center"></div>
         
          </div>
           </Link>

@@ -7,17 +7,17 @@ import { urlForImage } from '../../../sanity/lib/image';
 
 export default async function page() {
 
-  const  filteredData=  await client.fetch(`*[_type == "products" && category =="women"]`)
+  const  filteredData=  await client.fetch(`*[_type == "products" && category =="kids"]`)
   return (
     <div>
     <div>
-    <Image src="/women.webp" alt='Img' width={1300} height={600}  className=" p-3 md:pl-20"/>
+    <Image src="/mert.webp" alt='Img' width={1300} height={600}  className=" p-3 md:pl-20"/>
   </div>
 
 <div>
 
 <Wrapper>
-<div className="grid md:grid-cols-4 grid-rows gap-4   text-black md:mt-20 ">
+<div className="grid md:grid-cols-4 grid-rows gap-4     text-black md:mt-20 ">
 {filteredData.map((product :any , item : number)=>(
 <Link href ={`/product/${product.slug.current}`} className='p-5 ' key={item}>
 
